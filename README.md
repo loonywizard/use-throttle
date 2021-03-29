@@ -1,2 +1,3 @@
 # use-throttle
-Created with CodeSandbox
+
+React useThrottle hook
