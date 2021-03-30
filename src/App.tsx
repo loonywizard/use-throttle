@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./styles.css";
 
 import { useThrottle } from "./useThrottle";
@@ -6,6 +6,10 @@ import { useThrottle } from "./useThrottle";
 export default function App() {
   const [value, setValue] = useState("hello");
   const throttledValue = useThrottle(value);
+
+  useEffect(() => console.log(`throttledValue changed: ${throttledValue}`), [
+    throttledValue
+  ]);
 
   function onChange(event: React.ChangeEvent<HTMLInputElement>) {
     setValue(event.target.value);
