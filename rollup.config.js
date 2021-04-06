@@ -16,7 +16,7 @@ export default [
       babel({
         extensions: ['.ts'],
       }),
-    ]
+    ],
   },
 
   // UMD
