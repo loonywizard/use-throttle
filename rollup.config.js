@@ -11,6 +11,7 @@ export default [
     output: {
       file: 'dist/index.es.js', format: 'es',
     },
+    external: ['react'],
     plugins: [
       typescript(),
       babel({
@@ -27,7 +28,11 @@ export default [
       format: 'umd',
       name: 'reactUseThrottle',
       indent: false,
+      globals: {
+        react: 'react',
+      },
     },
+    external: ['react'],
     plugins: [
       typescript(),
       babel({
